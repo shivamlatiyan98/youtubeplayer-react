@@ -1,0 +1,58 @@
+// noinspection JSAnnotator
+import  React from  'react';
+
+
+
+const  Videolist_item=({video ,onvideoselect})=> {
+
+
+
+
+const imagurl=video.snippet.thumbnails.default.url;
+const  title=video.snippet.title;
+
+
+    return (
+    <li className='list-group-item' onClick={() =>  onvideoselect(video)}>
+        <div className="video-list media">
+
+
+        <div className='media-left'>
+
+           <img className='media-object'  src={imagurl} />
+
+
+        </div>
+
+
+
+        <div className= "media-body">
+
+             <div className="media-heading">
+                 {title}
+             </div>
+
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+    </li>
+
+    );
+
+
+
+
+}
+
+export  default  Videolist_item;
